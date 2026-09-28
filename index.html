@@ -1,18 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio de Eleazar López</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Estudiante de Programación</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuente elegante y moderna de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <h1>Eleazar López Mahiques</h1>
-    <h2>Titulacion: Tecnico Informatico</h2>
-    <p>Documento inicial para verificar la automatización del despliegue continuo.</p>
-  </header>
-</body>
 
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo">Mi Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#sobre-mi">Quién soy</a></li>
+            <li><a href="#historia">Mi Historia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Sección Principal (Hero) - Inspirada en la foto -->
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hola, soy <span class="highlight">Eleazar</span></h1>
+                <h2>Futuro Programador & Técnico Microinformático</h2>
+                <p>Apasionado por el código, el hardware y la creación de soluciones tecnológicas eficientes.</p>
+                <a href="#proyectos" class="btn-primary">Ver mis proyectos</a>
+            </div>
+            <div class="hero-image">
+                <!-- Reemplaza esto con la ruta de tu foto en blanco y negro -->
+                <img src="./image.png" alt="Retrato profesional en blanco y negro">
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Quién Soy -->
+    <section class="section" id="sobre-mi">
+        <div class="container">
+            <h2 class="section-title">Quién Soy</h2>
+            <div class="section-content">
+                <p>Soy un estudiante con una clara vocación hacia el desarrollo de software y la informática. Mi objetivo es combinar mis conocimientos de programación con mi experiencia práctica en el mundo del hardware para ofrecer soluciones completas y optimizadas.</p>
+                <p>Me considero una persona meticulosa, constante y con muchas ganas de seguir aprendiendo en el sector tecnológico.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Historia y Formación -->
+    <section class="section bg-light" id="historia">
+        <div class="container">
+            <h2 class="section-title">Mi Historia y Formación</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>IES Simarro La Cabra (Xàtiva)</h3>
+                    <p class="timeline-date">Actualidad</p>
+                    <p>Actualmente cursando mis estudios en el IES Simarro La Cabra, donde estoy construyendo las bases de mi futuro profesional en el mundo de la informática y la programación.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Técnico Microinformático</h3>
+                    <p class="timeline-date">Grado Medio</p>
+                    <p>Poseo el título de Grado Medio en Técnico Microinformático. Una etapa fundamental donde adquirí los conocimientos técnicos sobre sistemas, redes y mantenimiento.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Especialidad: Montaje de Ordenadores</h3>
+                    <p class="timeline-date">Especialización</p>
+                    <p>Mi gran pasión dentro del hardware es el montaje de ordenadores, especialmente de gama alta y Gaming. Disfruto seleccionando componentes, optimizando refrigeración y ensamblando máquinas de alto rendimiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section class="section" id="proyectos">
+        <div class="container">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="grid-proyectos">
+                <!-- Proyecto 1: Ordenador Gaming -->
+                <div class="card">
+                    <div class="card-image">
+                        <!-- Reemplaza con tu foto de un PC montado -->
+                        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=1000&auto=format&fit=crop" alt="Montaje de PC Gaming">
+                    </div>
+                    <div class="card-body">
+                        <h3>Montaje PC Gaming "Titan"</h3>
+                        <p>Ensamblaje completo de un ordenador de altas prestaciones. Optimización de flujo de aire, gestión de cables (cable management) y configuración de BIOS.</p>
+                        <span class="tag">Hardware</span>
+                        <span class="tag">Gaming</span>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Programación -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=1000&auto=format&fit=crop" alt="Proyecto de Programación">
+                    </div>
+                    <div class="card-body">
+                        <h3>App de Gestión de Inventario</h3>
+                        <p>Desarrollo de una aplicación web para la gestión de stock de componentes informáticos. Interfaz limpia y base de datos optimizada.</p>
+                        <span class="tag">Programación</span>
+                        <span class="tag">Web</span>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Montaje PC -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=1000&auto=format&fit=crop" alt="Workstation Profesional">
+                    </div>
+                    <div class="card-body">
+                        <h3>Workstation de Diseño</h3>
+                        <p>Configuración y montaje de un equipo orientado al diseño gráfico y renderizado 3D. Selección de componentes críticos para el rendimiento.</p>
+                        <span class="tag">Hardware</span>
+                        <span class="tag">Diseño</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto">
+        <div class="container">
+            <h2>¿Hablamos?</h2>
+            <p>Estoy abierto a oportunidades, colaboraciones o simplemente a hablar de tecnología.</p>
+            <a href="mailto:tu-correo@ejemplo.com" class="btn-primary">Enviar un correo</a>
+            <div class="socials">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Eleazar López. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
