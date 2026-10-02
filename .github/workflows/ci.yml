@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+  schedule:
+    - cron: "0 9 * * 1"
+    
 jobs:
   html:
     name: HTML válido
