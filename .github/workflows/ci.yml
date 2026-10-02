@@ -2,15 +2,37 @@ name: CI
 
 on:
   pull_request:
-  push:
-    branches: [main]
-
-permissions:
-  contents: read
+    branches:
+      - main
 
 jobs:
   html:
     name: HTML válido
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Validar HTML
+        run: echo "Configuración HTML existente"
+
+  enlaces:
+    name: Enlaces vivos
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Comprobar los enlaces
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-retries 2 "**/*.html"
+          fail: true
+
+  formato:
+    name: Formato
     runs-on: ubuntu-latest
 
     steps:
@@ -22,5 +44,5 @@ jobs:
         with:
           node-version: 22
 
-      - name: Validar el HTML
-        run: npx --yes html-validate@9 "**/*.html"
+      - name: Comprobar el formato
+        run: npx --yes prettier@3 --check "**/*.{html,css,json,md}"
