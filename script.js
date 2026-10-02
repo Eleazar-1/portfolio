@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Animación sutil al hacer Scroll (Fade In) ---
-    const sections = document.querySelectorAll('.section, .card');
+    const sections = document.querySelectorAll('.section, .card, .tech-card');
     
     const observerOptions = {
         root: null,
