@@ -7,6 +7,9 @@ on:
 
   schedule:
     - cron: "0 9 * * 1"
+
+permissions:
+  contents: read
     
 jobs:
   html:
@@ -31,7 +34,7 @@ jobs:
       - name: Comprobar los enlaces
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --max-retries 2 "**/*.html"
+          args: --no-progress --max-retries 2 --exclude "https://www\\.linkedin\\.com/.*" "**/*.html"
           fail: true
 
   formato:
@@ -49,3 +52,16 @@ jobs:
 
       - name: Comprobar el formato
         run: npx --yes prettier@3 --check "**/*.{html,css,json,md}"
+
+  calidad:
+    name: Presupuesto de calidad
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Auditar con Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
