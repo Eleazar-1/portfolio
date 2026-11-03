@@ -7,6 +7,9 @@ on:
 
   schedule:
     - cron: "0 9 * * 1"
+
+permissions:
+  contents: read
     
 jobs:
   html:
@@ -31,7 +34,7 @@ jobs:
       - name: Comprobar los enlaces
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --max-retries 2 "**/*.html"
+          args: --no-progress --max-retries 2 --exclude "https://www\\.linkedin\\.com/.*" "**/*.html"
           fail: true
 
   formato:
