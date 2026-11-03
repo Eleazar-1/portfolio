@@ -140,7 +140,7 @@ img {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -229,13 +229,23 @@ img {
 }
 
 @keyframes floatShape {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-18px) rotate(10deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(10deg);
+  }
 }
 
 @keyframes floatShapeReverse {
-  0%, 100% { transform: translateY(0) rotate(45deg); }
-  50% { transform: translateY(20px) rotate(55deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(55deg);
+  }
 }
 
 .hero-content {
@@ -602,7 +612,8 @@ footer .btn-primary:hover {
     justify-content: center;
   }
 
-  .hero-text p, .hero-buttons {
+  .hero-text p,
+  .hero-buttons {
     margin-left: auto;
     margin-right: auto;
   }
