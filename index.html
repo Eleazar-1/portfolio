@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <!-- Barra de Progreso de Scroll -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
     <!-- Barra de Navegación -->
     <nav class="navbar">
         <div class="logo">Mi Portfolio</div>
@@ -29,8 +32,15 @@
         </div>
     </nav>
 
-    <!-- Sección Principal (Hero) - Inspirada en la foto -->
+    <!-- Sección Principal (Hero) con Figuras Geométricas Animadas -->
     <header class="hero" id="inicio">
+        <!-- Figuras decorativas de fondo -->
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Hola, soy <span class="highlight">Eleazar</span></h1>
@@ -39,10 +49,12 @@
                     Apasionado por el código, el hardware y la creación de soluciones
                     tecnológicas eficientes.
                 </p>
-                <a href="#proyectos" class="btn-primary">Ver mis proyectos</a>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn-primary">Ver mis proyectos</a>
+                    <a href="#contacto" class="btn-secondary">Contactar</a>
+                </div>
             </div>
             <div class="hero-image">
-                <!-- Reemplaza esto con la ruta de tu foto en blanco y negro -->
                 <img src="./image.png" alt="Retrato profesional en blanco y negro" />
             </div>
         </div>
@@ -89,9 +101,7 @@
 
                 <!-- GitHub Actions -->
                 <div class="tech-card">
-                    <img src="https://cdn.jsdelivr.net/npm/ngx-simple-icons@1.0.18/esm2020/lib/icons/githubactions.mjs"
-                        alt="GitHub Actions Logo" class="tech-icon-img" style="display:none;">
-                    <svg role="img" viewBox="0 0 24 24" class="tech-icon-img" fill="#2088FF"
+                    <svg role="img" viewBox="0 0 24 24" class="tech-icon-img" fill="#000000"
                         xmlns="http://www.w3.org/2000/svg">
                         <title>GitHub Actions</title>
                         <path
@@ -106,14 +116,14 @@
                     <span>GitHub Pages</span>
                 </div>
 
-                <!-- Java (Alternativa) -->
+                <!-- Java -->
                 <div class="tech-card">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java Logo"
                         class="tech-icon-img">
                     <span>Java</span>
                 </div>
 
-                <!-- JavaScript (Opción SVG) -->
+                <!-- JavaScript -->
                 <div class="tech-card">
                     <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/javascript/default.svg"
                         alt="JavaScript Logo" class="tech-icon-img">
@@ -167,9 +177,8 @@
             <h2 class="section-title">Proyectos</h2>
             <div class="grid-proyectos">
                 <!-- Proyecto 1: Ordenador Gaming -->
-                <div class="card">
+                <div class="card tilt-card">
                     <div class="card-image">
-                        <!-- Reemplaza con tu foto de un PC montado -->
                         <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=1000&auto=format&fit=crop"
                             alt="Montaje de PC Gaming" />
                     </div>
@@ -177,16 +186,17 @@
                         <h3>Montaje PC Gaming "Titan"</h3>
                         <p>
                             Ensamblaje completo de un ordenador de altas prestaciones.
-                            Optimización de flujo de aire, gestión de cables (cable
-                            management) y configuración de BIOS.
+                            Optimización de flujo de aire, gestión de cables y configuración de BIOS.
                         </p>
-                        <span class="tag">Hardware</span>
-                        <span class="tag">Gaming</span>
+                        <div class="card-tags">
+                            <span class="tag">Hardware</span>
+                            <span class="tag">Gaming</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Proyecto 2: Programación -->
-                <div class="card">
+                <div class="card tilt-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=1000&auto=format&fit=crop"
                             alt="Proyecto de Programación" />
@@ -195,16 +205,17 @@
                         <h3>App de Gestión de Inventario</h3>
                         <p>
                             Desarrollo de una aplicación web para la gestión de stock de
-                            componentes informáticos. Interfaz limpia y base de datos
-                            optimizada.
+                            componentes informáticos. Interfaz limpia y base de datos optimizada.
                         </p>
-                        <span class="tag">Programación</span>
-                        <span class="tag">Web</span>
+                        <div class="card-tags">
+                            <span class="tag">Programación</span>
+                            <span class="tag">Web</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Proyecto 3: Montaje PC -->
-                <div class="card">
+                <div class="card tilt-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=1000&auto=format&fit=crop"
                             alt="Workstation Profesional" />
@@ -213,11 +224,12 @@
                         <h3>Workstation de Diseño</h3>
                         <p>
                             Configuración y montaje de un equipo orientado al diseño gráfico
-                            y renderizado 3D. Selección de componentes críticos para el
-                            rendimiento.
+                            y renderizado 3D. Selección de componentes críticos para el rendimiento.
                         </p>
-                        <span class="tag">Hardware</span>
-                        <span class="tag">Diseño</span>
+                        <div class="card-tags">
+                            <span class="tag">Hardware</span>
+                            <span class="tag">Diseño</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -234,8 +246,8 @@
             </p>
             <a href="mailto:tu-correo@ejemplo.com" class="btn-primary">Enviar un correo</a>
             <div class="socials">
-                <a href="https://www.linkedin.com/in/eleazar-lópez-761795440 ">LinkedIn</a>
-                <a href="https://github.com/Eleazar-1">GitHub</a>
+                <a href="https://www.linkedin.com/in/eleazar-l%C3%B3pez-761795440" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Eleazar-1" target="_blank">GitHub</a>
             </div>
         </div>
         <div class="copyright">
